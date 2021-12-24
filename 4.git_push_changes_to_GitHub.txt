@@ -1,0 +1,53 @@
+[user@centos-moris OTUS]$ ls -al
+total 0
+drwxrwxr-x.  2 user user   6 Dec 24 22:43 .
+drwx------. 10 user user 255 Dec 24 22:43 ..
+[user@centos-moris OTUS]$ git clone git@github.com:elevity/Git_Homework
+Cloning into 'Git_Homework'...
+warning: You appear to have cloned an empty repository.
+[user@centos-moris OTUS]$ ls -al
+total 0
+drwxrwxr-x.  3 user user  26 Dec 24 22:44 .
+drwx------. 10 user user 255 Dec 24 22:43 ..
+drwxrwxr-x.  3 user user  18 Dec 24 22:44 Git_Homework
+[user@centos-moris OTUS]$ cd Git_Homework/
+[user@centos-moris Git_Homework]$ cp ~/3/*.* ~/OTUS/Git_Homework/
+[user@centos-moris Git_Homework]$ ls -al
+total 212
+drwxrwxr-x. 3 user user    90 Dec 24 22:48 .
+drwxrwxr-x. 3 user user    26 Dec 24 22:44 ..
+-rw-r--r--. 1 user user 73645 Dec 24 22:48 1 GitHub_new_repo_pub.JPG
+drwxrwxr-x. 7 user user   119 Dec 24 22:44 .git
+-rw-r--r--. 1 user user 96746 Dec 24 22:48 key_add2.JPG
+-rw-r--r--. 1 user user 41152 Dec 24 22:48 key_add.JPG
+[user@centos-moris Git_Homework]$ git add -A
+[user@centos-moris Git_Homework]$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#       new file:   1 GitHub_new_repo_pub.JPG
+#       new file:   key_add.JPG
+#       new file:   key_add2.JPG
+#
+[user@centos-moris Git_Homework]$ git commit -m 'commit new files'
+[master (root-commit) 8146d67] commit new files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1 GitHub_new_repo_pub.JPG
+ create mode 100644 key_add.JPG
+ create mode 100644 key_add2.JPG
+[user@centos-moris Git_Homework]$ git push -u origin main
+error: src refspec main does not match any.
+[user@centos-moris Git_Homework]$ git branch -M main
+[user@centos-moris Git_Homework]$ git push -u origin main
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 131.23 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To git@github.com:elevity/Git_Homework
+ * [new branch]      main -> main
+Branch main set up to track remote branch main from origin.
